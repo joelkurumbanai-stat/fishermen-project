@@ -1,0 +1,333 @@
+\documentclass[11pt, a4paper, oneside, openright]{book}
+\usepackage[
+bindingoffset=0.2in,
+left=1.37in,
+right=0.98in,
+top=1.25in,
+bottom=1.18in,
+footskip=.25in]{geometry}
+\usepackage{ragged2e}
+\usepackage{pdfpages}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,url,array}
+%\usepackage{showframe}% Just to show the frame
+\usepackage{datetime}
+\usepackage[object=vectorian]{pgfornament}
+\usepackage{fourier-orns}
+
+\newcommand{\ornamento}{\vspace{2em}\noindent \textcolor{darkgray}{\hrulefill~ \raisebox{-2.5pt}[10pt][10pt]{\leafright \decofourleft 
+			\decothreeleft  \aldineright \decotwo \floweroneleft \decoone   \floweroneright 
+			\decotwo \aldineleft\decothreeright \decofourright \leafleft} ~  \hrulefill \\ \vspace{2em}}}
+
+\newdateformat{monthyeardate}{%
+	\monthname[\THEMONTH] \THEYEAR}
+%%%%%%%%%%%%%%%%%%%%%%%%% Chapter Quotes %%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+%%%%%%%%%%%%%%%%%%
+\usepackage{bbding}
+\usepackage{multirow}
+\usepackage{colortbl} 
+% Please add the following required packages to your document preamble:
+\usepackage{lipsum,etoolbox}
+\AtBeginEnvironment{tabular}{\doublespacing}
+\usepackage{graphicx} 
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{titletoc}
+%\titlecontents{chapter}[0pt]{\addvspace{10pt}\bfseries}{\thecontentslabel\quad}{\hspace*{-2em}}{\titlerule*[0.7pc]{.}\contentspage}
+\usepackage{booktabs}
+\usepackage{mwe}
+\usepackage{enumitem}
+\usepackage{pgf-pie}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{apacite}
+\usepackage{hyperref}
+\hypersetup{colorlinks, breaklinks, linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % Set up hyperlinks including colors for references, urls and citations
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{language=Python}
+\pgfplotsset{width=10cm,compat=1.17}
+\usepackage[withpage]{acronym} % Include a list of acronyms
+\titleformat{\chapter}[display]
+{\centering \normalsize \large \bfseries \color{black}}{CHAPTER - \thechapter}{10pt}{}
+\usepackage{smartdiagram}
+\usepackage{tikz}
+\usepackage{csquotes}
+\usetikzlibrary{arrows}
+\usepackage{tikz} % the tikz package  
+\usetikzlibrary{shapes.geometric,arrows} % to implement the corresponding shapes and arrows, these are used.  
+\usepackage[comma, sort&compress, authoryear]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\title{Title of the project}
+\author{NAME of the candidate}
+\newcommand{\disp}{STATISTICS}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[LO]{{\rightmark}}
+%\fancyhead[RE]{{\leftmark}}
+\fancyfoot[CO,CE]{\thepage}
+\usepackage{tfrupee} 
+
+\usepackage{textcmds} % double quoted text
+%\usepackage{unicode-math}
+% LaTeX
+%\usepackage{xcharter-otf}
+%\usepackage{tgpagella}
+\usepackage{bookman}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+%------------------------------------------------
+\XeTeXinputencoding latin1
+% Fonts
+%\usepackage{times}
+%\usepackage[T1]{fontenc} % Support for more character glyphs
+\usepackage{fontspec} % Required for specifying custom fonts in XeTeX
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Ligatures={Common}]{Adobe Caslon Pro} % Normal document font
+%\setmonofont[Scale=0.8]{Envy Code R} % Mono spaced font (\texttt{})
+%\setsansfont[Scale=0.9]{Optima} % Sans-serif font (\textsf{})
+\renewcommand*{\acffont}[1]{{\normalsize\itshape #1}} % Font style for the acronym text (e.g. Do It Yourself)
+\renewcommand*{\acfsfont}[1]{{\normalsize\upshape #1}} % Font style for the acronym in bracket (e.g. (DIY))
+%------------------------------------------------
+% Hyphenations
+\usepackage[none]{hyphenat}
+\hyphenation{a-no-ma-lous a-no-ma-ly amounts breaches} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+\makeindex % Write an index file
+\let\cleardoublepage=\clearpage
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1.5em}
+\usepackage{multicol}
+
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\begin{document}
+%------------------------------------------------------
+%	TITLE PAGE
+%---------------------------------------------------------------------------------------
+\begin{titlepage}
+		\begin{center}
+			%\definecolor{blue}{rgb}{0.0, 0.0, 1.0}
+			%\textcolor{blue}
+			{\fontsize{16}{16}\selectfont \bf SOCIO-ECONOMIC STUDY OF THE FISHERMEN COMMUNITY AT COLACHEL FISHING HARBOUR \par}%[0.9cm] % Thesis title
+			\vskip 2cm
+			\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+			\textcolor{ao(english)} 
+			{\bf \fontsize{14}{14}\selectfont A PROJECT}\\
+			\bigskip
+			
+			\vskip 1cm
+			{ \it \fontsize{14}{14}\selectfont Submitted by}
+			\vskip 1.5cm
+			\definecolor{denim}{rgb}{0.0, 0.18, 0.39}
+			\textcolor{denim}
+			{{ \bf{\fontsize{14}{15}\selectfont JOEL RAJ R}}}\\
+				\vskip 0.2cm
+			{{ \bf{\fontsize{13}{16}\selectfont Reg.No.: 24084016513411108}}}\\
+			\vskip 0.5cm
+			%{\textbf{{\fontsize{15}{15}\selectfont \disp}}}\\
+			{\textbf{{\fontsize{13}{13}\selectfont }}}
+			\vskip 0.5cm
+			{{{\normalsize \textit{\fontsize{13}{13}\selectfont 
+							in partial fulfillment for the award of the degree of 
+							\\}}}}
+			\vskip 1cm
+			\definecolor{awesome}{rgb}{1.0, 0.13, 0.32}
+			\textcolor{awesome}
+			{\textbf{\setstretch{1.3}{\fontsize{14}{15}\selectfont MASTER OF SCIENCE IN \\ STATISTICS}}}
+			\vskip 1cm
+			%
+			%\vfill
+			%
+			\includegraphics[height=3cm, width=3cm]{./Pictures/msulogo.png}
+			%
+			\vskip 1cm
+			\definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
+			\textcolor{bostonuniversityred}
+			{{ \setstretch{1.3}{\fontsize{14}{14}\selectfont \textbf{DEPARTMENT OF STATISTICS\\MANONMANIAM SUNDARANAR UNIVERSITY}\\
+						TIRUNELVELI - 627 012\\
+			}}}
+			\vskip 1cm
+			\vfill
+			{\fontsize{13}{13}\selectfont \bf APRIL 2026}\\%[3cm] % Date
+			%\includegraphics{Logo} % University/department logo - uncomment to place it
+			
+			%\vfill
+		\end{center}
+\end{titlepage}
+\clearpage % Force a break to an even page
+%\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	PREFACE
+%----------------------------------------------------------------------------------------
+\frontmatter
+\thispagestyle{empty}
+%\leavevmode%
+\vfill
+\begin{center}
+	\includegraphics[height=2.8cm, width=3cm]{./Pictures/msulogo_white}\\
+	\textbf{\large MANONMANIAM SUNDARANAR UNIVERSITY} \\
+	\textbf{TIRUNELVELI - 627 012}
+\end{center} 
+\hrulefill
+%\vfill
+\bigskip
+%\noindent
+\begin{center}
+	\textbf{\large BONAFIDE CERTIFICATE}
+\end{center} 
+\bigskip
+
+{\doublespacing
+\quad Certified that this project titled \textbf{``SOCIO-ECONOMIC STUDY OF THE FISHERMEN COMMUNITY AT COLACHEL FISHING HARBOUR"} is the bonafide work of  \textbf{JOEL RAJ R (\textit{Reg.No.:} 24084016513411108)} who carried out the work under my supervision.  Certified further that to the best of my knowledge the work reported herein does not form part of any other thesis or dissertation on the basis of which a degree or award was conferred on an earlier occasion on this or any other candidate.
+
+}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\noindent
+\textbf{Signature of the HOD} \hfill \textbf{Signature of the Supervisor}\\
+{\small with date \hfill 	with date}
+
+
+%\hfill\strut
+%\vfill
+\cleardoublepage
+
+\thispagestyle{plain}
+\phantomsection\addcontentsline{toc}{chapter}{ABSTRACT}
+%\addcontentsline{toc}{chapter}{ABSTRACT}
+\begin{center}
+	%\large
+%	\normalsize 
+	\textbf{SOCIO-ECONOMIC STUDY OF THE FISHERMEN COMMUNITY AT COLACHEL FISHING HARBOUR}
+	
+	\vspace{0.3cm}
+	%\large
+	%Thesis Subtitle
+	
+%	\vspace{0.2cm}
+	\textbf{JOEL RAJ R}
+	
+	\vspace{0.4cm}
+	\textbf{\Large Abstract}
+\end{center} 
+{\doublespacing
+\qquad 
+
+This study examines the socio-economic conditions of 114 male fishermen in and around Colachel Fishing Harbor in Kanyakumari district, Tamil Nadu. The study focuses on demographic profile, income variation, expenditure pattern, fishing safety perceptions, and opinions on government welfare measures.
+The findings reveal that most fishermen have low educational attainment and long years of fishing experience. Income is found to vary based on factors such as fishing experience and occupational role. Loan repayment constitutes the major share of household expenditure, indicating significant financial burden. The study also shows that there is no notable difference in safety perceptions across different fishing roles. However, a majority of respondents expressed dissatisfaction with government welfare measures related to deep-sea safety. Overall, the study highlights the economic vulnerability of the fishing community and emphasizes the need for effective policy implementation and improved support systems.
+
+\vspace{0.2cm}
+\noindent
+\textbf{Keywords:} Socio-Economic Status, Colachel Fishing Harbor, ANOVA, Regression, Expenditure Pattern, Government Welfare
+
+}
+\clearpage % Force a break to an even page
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{plain}
+\phantomsection\addcontentsline{toc}{chapter}{ACKNOWLEDGMENT}
+\begin{center}
+	%\large
+	\normalsize 
+	\textbf{ACKNOWLEDGMENT}
+
+\end{center} {\doublespacing    
+    \qquad I express my sincere gratitude to the Almighty God for His grace and blessings, which enabled me to successfully complete this project.
+    
+    I am deeply indebted to my guide, \textbf{Dr. K. Manoj}, Assistant Professor, Department of Statistics, Manonmaniam Sundaranar University, for his invaluable guidance, constant encouragement, and insightful suggestions throughout the course of this study. His support has been instrumental in shaping this work.
+    
+    I extend my heartfelt thanks to \textbf{Dr. P. Arumugam}, Professor and Head, and all the faculty members of the Department of Statistics, especially \linebreak \textbf{Dr. R. Sasikumar}, Assistant Professor, and \textbf{Dr. V. Deneshkumar}, Assistant Professor, for their continuous support, encouragement, and academic guidance during my postgraduate study.
+    
+    I gratefully acknowledge the support and encouragement of my parents, friends, and well-wishers, whose motivation and assistance helped me complete this project successfully.
+    
+    Finally, I thank all those who have directly or indirectly contributed to the successful completion of this work.
+    
+    \begin{flushright}
+    	\textbf{JOEL RAJ R}
+    \end{flushright}
+}
+\clearpage % Force a break to an even page
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+	{\doublespacing
+	%\addcontentsline{toc}{chapter}{CONTENTS}
+	\tableofcontents % Print the table of contents
+	
+	\clearpage% Force a break to an even page
+	
+%----------------------------------------------------------------------------------------
+%	LIST OF TABLES
+%----------------------------------------------------------------------------------------
+	\phantomsection\addcontentsline{toc}{chapter}{LIST OF TABLES}
+		
+	\listoftables % Print the list of tables
+	
+	\clearpage% Force a break to an even page
+	
+%----------------------------------------------------------------------------------------
+%	LIST OF FIGURES
+%----------------------------------------------------------------------------------------
+	\phantomsection\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+	
+	\listoffigures % Print the list of figures
+	
+	\clearpage % Force a break to an even page
+	
+%----------------------------------------------------------------------------------------
+%	ACRONYMS
+%----------------------------------------------------------------------------------------
+%\phantomsection\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}	
+%\include{acronyms.tex} % Include a List of Acronyms section using acronyms.tex where they are defined
+	\lhead{Chapter 1. \emph{INTRODUCTION}}
+	
+\clearpage % Force a break to an even page
+	\mainmatter
+	{\doublespacing
+	\input{chapters/chapter1.tex}
+	\input{chapters/chapter2.tex}
+	\input{chapters/chapter3.tex}
+	\input{chapters/chapter4.tex}
+	\input{chapters/chapter5.tex}
+	}
+	\addcontentsline{toc}{section}{REFERENCES}
+	\lhead{\emph{REFERENCES}}
+	\bibliographystyle{apacite}
+	\bibliography{references}
+	\backmatter
+%\appendix
+\input{chapters/appendix1.tex}
+%\input{chapters/appendix2.tex}
+\end{document}
